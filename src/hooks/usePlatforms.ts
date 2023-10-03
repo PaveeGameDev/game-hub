@@ -1,8 +1,3 @@
 import { useData } from "./useData";
-type Platform = {
-  id: number;
-  name: string;
-  slug: string;
-};
-
+import { Platform } from "./useGames";
 export const usePlatforms = () => useData<Platform>("/platforms/lists/parents");
