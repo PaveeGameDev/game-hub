@@ -1,4 +1,4 @@
-import { useData } from "./useData";
+import genres from "../Data/genres";
 
 export type Genre = {
   id: number;
@@ -6,4 +6,8 @@ export type Genre = {
   image_background: string;
 };
 
-export const useGenres = () => useData<Genre>("/genres");
+export const useGenres = () => ({
+  data: genres,
+  isLoading: false,
+  error: null,
+});
